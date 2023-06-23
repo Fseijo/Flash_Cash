@@ -1,0 +1,30 @@
+.h-1 {
+  color: hsl(24, 98%, 59%);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.h-2 {
+  color: hsl(230, 15%, 24%);
+  font-size: 1.5rem;
+}
+.h-3 {
+  color: hsl(188, 44%, 60%);
+  font-size: 1.5rem;
+}
+
+.parg-1 {
+  text-align: justify;
+  color: hsl(230, 15%, 24%);
+  font-weight: bold;
+}
+
+.cascading-right {
+  margin-right: -50px;
+}
+
+@media (max-width: 991.98px) {
+  .cascading-right {
+    margin-right: 0;
+  }
+}
