@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
-    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"></html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <link rel="icon" href="../static/images/icon.ico">
-    <link rel="stylesheet" href="/flashCash/src/main/resources/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/index.css">
 
 </head>
 <body>
@@ -28,28 +27,28 @@
 
                       </div>
       
-                      <form>
+                      <form th:action="@{/signin}" method="post">
                         <p class="h-3">Please login to your account</p>
       
                         <div class="form-outline mb-4">
                           <input type="email" id="form2Example11" class="form-control"
-                            placeholder="Email address" />
+                            placeholder="Email address" required/>
                           <label class="form-label" for="form2Example11">Email</label>
                         </div>
       
                         <div class="form-outline mb-4">
-                          <input type="password" id="form2Example22" class="form-control" />
+                          <input type="password" id="form2Example22" class="form-control" required/>
                           <label class="form-label" for="form2Example22">Password</label>
                         </div>
       
                         <div class="text-center pt-1 mb-5 pb-1">
-                          <button class="btn btn-warning" type="button">Sign-in</button>
+                          <button class="btn btn-warning" type="submit">Sign-in</button>
                           <a class="text-muted" href="#!">Forgot password?</a>
                         </div>
       
                         <div class="d-flex align-items-center justify-content-center pb-4">
                           <p class="mb-0 me-2">Don't have an account?</p>
-                          <button type="button" class="btn btn-dark">Create new</button>
+                          <button type="submit" href="/api/v1/auth/signup" class="btn btn-dark">Create new</button>
                         </div>
       
                       </form>
