@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
 
@@ -21,27 +22,26 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/**", "static/bootstrap.min.css", "static/index.css", "images/**", "static/bootstrap.bundle.min.js")
+                        .requestMatchers("/**", "/signin" ,"/static/**")
                         .permitAll()
                         .anyRequest()
                         .authenticated()
                 )
                 .formLogin(
-                        (form)-> form
+                        (form) -> form
                                 .loginPage("/signin")
                                 .permitAll()
                                 .usernameParameter("email")
                                 .defaultSuccessUrl("/", true)
                 )
                 .logout(
-                        (logout)-> logout
+                        (logout) -> logout
                                 .permitAll()
-                );
-//                .sessionManagement(
-//                        (session)-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//                )
-//                .authenticationProvider(authenticationProvider)
-//                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+                )
+        .sessionManagement(
+                        (session)-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                )
+                .authenticationProvider(authenticationProvider);
         return http.build();
     }
 }

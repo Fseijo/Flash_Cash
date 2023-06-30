@@ -6,13 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/index.css">
-    <link rel="stylesheet" href="/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap.bundle.min.js">
 </head>
-<header>
-
-</header>
 <body>
 <section class="text-center text-lg-start">
     <div class="container py-4">
@@ -24,7 +21,7 @@
               ">
                     <div class="card-body p-5 shadow-5 text-center">
                         <h2 class="fw-bold mb-5 h-1">Sign up now</h2>
-                        <form th:action="@{/signup}" th:object="${signUpForm}" method="POST">
+                        <form th:action="@{/signup}" th:object="${registerForm}" method="POST">
                             <!-- 2 column grid layout with text inputs for the first and last names -->
                             <div class="row">
                                 <div class="col-md-6 mb-4">
@@ -43,19 +40,19 @@
 
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" th:field="*{email}" id="form3Example3" class="form-control" placeholder="exemple@mail.com"/>
+                                <input type="email" th:field="*{email}" id="form3Example3" class="form-control" placeholder="exemple@mail.com" required/>
                                 <label class="form-label" for="form3Example3">Email address</label>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" th:field="*{password}" id="form3Example4" class="form-control"/>
+                                <input type="password" th:field="*{password}" id="form3Example4" class="form-control" required/>
                                 <label class="form-label" for="form3Example4">Password</label>
                             </div>
 
                             <!-- Confirm Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" th:field="*{confirmPassword}" id="form3Example5" class="form-control"/>
+                                <input type="password" th:field="*{confirmPassword}" id="form3Example5" class="form-control" required/>
                                 <label class="form-label" for="form3Example5">Confirm Password</label>
                             </div>
 
@@ -69,8 +66,8 @@
             </div>
 
             <div class="col-lg-6 mb-5 mb-lg-0">
-                <img src="../static/images/img_phone_1.jpg" class="w-100 rounded-4 shadow-4"
-                     alt=""/>
+                <img th:src="@{/images/img_phone_1.jpg}" class="w-100 rounded-4 shadow-4"
+                     alt="phone_img_1"/>
             </div>
         </div>
     </div>

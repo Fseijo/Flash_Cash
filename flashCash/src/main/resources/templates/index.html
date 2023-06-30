@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/index.css">
-    <link rel="stylesheet" href="/static/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
 </head>
 <header class="p-3 text-bg-dark">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <a th:href="@{/}" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                 <img
-                        src="/static/images/logo.png"
+                        th:src="@{/images/logo.png}"
                         class="me-2 rounded"
                         height="80"
                         alt="FlashCash Logo"
@@ -23,16 +23,14 @@
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a th:href="@{/}" class="nav-link px-2 text-secondary">Home</a></li>
                 <li><a href="/faqs" class="nav-link px-2 text-white">FAQs</a></li>
                 <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
             </ul>
 
             <div class="text-end d-flex">
-                <form th:action="@{/signin}" method="GET">
-                    <button type="submit" class="btn btn-outline-light me-2">Sign-in</button>
-                </form>
-                <form th:action="@{/signup}">
+                    <button type="submit" class="btn btn-outline-light me-2" th:href="@{/signin}">Sign-in</button>
+                <form th:action="@{/signup}" method="GET">
                     <button type="submit" class="btn btn-warning">Sign-up</button>
                 </form>
             </div>
@@ -53,12 +51,14 @@
                                         <br/>
                                         <samp class="h-2">Sending money has never been this easy.</samp>
                                     </h1>
-                                    <button th:acction="@{/signin}" type="submit" class="btn btn-warning">Show now</button>
+                                    <form th:action="@{/signin}" method="GET">
+                                        <button type="submit" class="btn btn-warning me-2">Show now</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                            <img src="/static/images/img_phone.jpg"
+                            <img th:src="@{/images/img_phone.jpg}"
                                  alt="phone group" class="img-fluid" style="border-radius: 1rem 0 0 1rem;"/>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100" style="background-color: #fd8330;">
             <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="/static/images/img_phone_1.jpg"
+                <img th:src="@{/images/img_phone_1.jpg}"
                      class="img-fluid" alt="Sample image">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
