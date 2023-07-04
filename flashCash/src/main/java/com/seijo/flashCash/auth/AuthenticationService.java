@@ -6,7 +6,6 @@ import com.seijo.flashCash.model.User;
 import com.seijo.flashCash.model.UserAccount;
 import com.seijo.flashCash.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -31,9 +30,5 @@ public class AuthenticationService {
                 .build();
        return userRepository.save(user);
     }
-
-//    public UserDetails authenticateUser(AuthenticationRequest request){
-//
-//    }
 
 }

@@ -4,11 +4,10 @@ package com.seijo.flashCash.config;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+
 
 
 @Configuration
@@ -16,13 +15,11 @@ import org.springframework.security.web.SecurityFilterChain;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final AuthenticationProvider authenticationProvider;
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/**", "/signin" ,"/static/**")
+                        .requestMatchers("js/**","/bootstrap.min.css","/index.css", "/images/**", "/signup", "/", "/signin")
                         .permitAll()
                         .anyRequest()
                         .authenticated()
@@ -32,16 +29,12 @@ public class SecurityConfig {
                                 .loginPage("/signin")
                                 .permitAll()
                                 .usernameParameter("email")
-                                .defaultSuccessUrl("/", true)
+                                .defaultSuccessUrl("/home", true)
                 )
                 .logout(
                         (logout) -> logout
                                 .permitAll()
-                )
-        .sessionManagement(
-                        (session)-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                )
-                .authenticationProvider(authenticationProvider);
+                );
         return http.build();
     }
 }

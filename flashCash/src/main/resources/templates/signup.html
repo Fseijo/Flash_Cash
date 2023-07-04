@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
-<html xmlns:th="http://www.thymeleaf.org"></html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,34 +26,34 @@
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
-                                        <input type="text" th:field="*{firstname}" id="form3Example1" class="form-control" placeholder="First Name"/>
-                                        <label class="form-label" for="form3Example1">First name</label>
+                                        <input type="text" th:field="*{firstname}" id="firstname" class="form-control" placeholder="First Name"/>
+                                        <label class="form-label" for="firstname">First name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
-                                        <input type="text" th:field="*{lastname}" id="form3Example2" class="form-control" placeholder="Last Name"/>
-                                        <label class="form-label" for="form3Example2">Last name</label>
+                                        <input type="text" th:field="*{lastname}" id="lastname" class="form-control" placeholder="Last Name"/>
+                                        <label class="form-label" for="lastname">Last name</label>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" th:field="*{email}" id="form3Example3" class="form-control" placeholder="exemple@mail.com" required/>
-                                <label class="form-label" for="form3Example3">Email address</label>
+                                <input type="email" th:field="*{email}" id="email" class="form-control" placeholder="exemple@mail.com" required/>
+                                <label class="form-label" for="email">Email address</label>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" th:field="*{password}" id="form3Example4" class="form-control" required/>
-                                <label class="form-label" for="form3Example4">Password</label>
+                                <input type="password" th:field="*{password}" id="password" class="form-control" required/>
+                                <label class="form-label" for="password">Password</label>
                             </div>
 
                             <!-- Confirm Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" th:field="*{confirmPassword}" id="form3Example5" class="form-control" required/>
-                                <label class="form-label" for="form3Example5">Confirm Password</label>
+                                <input type="password" th:field="*{confirmPassword}" id="confirmPassword" class="form-control" required/>
+                                <label class="form-label" for="confirmPassword">Confirm Password</label>
                             </div>
 
                             <!-- Submit button -->
