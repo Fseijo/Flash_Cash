@@ -27,4 +27,8 @@ public class AuthenticationController {
         authenticationService.register(request);
         return new ModelAndView("signin");
     }
+    @GetMapping("/home")
+    public ModelAndView home(Model model){
+        return new ModelAndView("home");
+    }
 }
