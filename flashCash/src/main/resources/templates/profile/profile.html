@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!--Header-->
+<header class="p-3 text-bg-dark">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/flashcash/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <img th:src="@{/images/logo.png}"
+                     class="me-2 rounded"
+                     height="80"
+                     alt="FlashCash Logo"
+                     loading="lazy"/>
+            </a>
+            <!-- Left elements-->
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li>
+                    <a class="nav-link px-2 text-secondary" href="/flashcash/">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link px-2 text-secondary" href="/flashcash/transfer">Transfer</a>
+                </li>
+                <li>
+                    <a class="nav-link px-2 text-secondary" href="/flashcash/profile">Profile</a>
+                </li>
+                <li>
+                    <a href="/faqs" class="nav-link px-2 text-white">FAQs</a>
+                </li>
+                <li>
+                    <a href="/about" class="nav-link px-2 text-white">About</a>
+                </li>
+            </ul>
+            <!-- Right elements-->
+
+            <!-- Avatar -->
+            <div class="dropdown">
+                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                     class="btn btn-secondary dropdown-toggle rounded-circle"
+                     role="button"
+                     height="80"
+                     alt="Black and White Portrait of a Man"
+                     data-bs-toggle="dropdown"
+                     aria-expanded="false"
+                     loading="lazy"/>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="/flashcash/profile">My profile</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/flashcash/service">Settings</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item">
+                            <form th:action="@{/logout}" method="post">
+                                <input class="btn btn-outline-dark"
+                                       type="submit"
+                                       value="Sign Out"/>
+                            </form>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Avatar -->
+        </div>
+    </div>
+</header>
+<!--Header-->
+<!--List of beneficiaries section-->
+<section>
+    <!--Table-->
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>IBAN</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <div class="d-flex align-items-center">
+                    <img
+                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                            class="rounded-circle"
+                    />
+                    <div class="ms-3">
+                        <p class="fw-bold mb-1">John Doe</p>
+                        <p class="text-muted mb-0">john.doe@gmail.com</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <p class="fw-normal mb-1">Software engineer</p>
+                <p class="text-muted mb-0">IT department</p>
+            </td>
+            <td>
+                <span class="badge badge-success rounded-pill d-inline">Active</span>
+            </td>
+            <td>Senior</td>
+            <td>
+                <button type="button" class="btn btn-link btn-sm btn-rounded">
+                    Edit
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="d-flex align-items-center">
+                    <img
+                            src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                            class="rounded-circle"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                    />
+                    <div class="ms-3">
+                        <p class="fw-bold mb-1">Alex Ray</p>
+                        <p class="text-muted mb-0">alex.ray@gmail.com</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <p class="fw-normal mb-1">Consultant</p>
+                <p class="text-muted mb-0">Finance</p>
+            </td>
+            <td>
+        <span class="badge badge-primary rounded-pill d-inline"
+        >Onboarding</span
+        >
+            </td>
+            <td>Junior</td>
+            <td>
+                <button
+                        type="button"
+                        class="btn btn-link btn-rounded btn-sm fw-bold"
+                        data-mdb-ripple-color="dark"
+                >
+                    Edit
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="d-flex align-items-center">
+                    <img
+                            src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                            class="rounded-circle"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                    />
+                    <div class="ms-3">
+                        <p class="fw-bold mb-1">Kate Hunington</p>
+                        <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <p class="fw-normal mb-1">Designer</p>
+                <p class="text-muted mb-0">UI/UX</p>
+            </td>
+            <td>
+                <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>
+            </td>
+            <td>Senior</td>
+            <td>
+                <button
+                        type="button"
+                        class="btn btn-link btn-rounded btn-sm fw-bold"
+                        data-mdb-ripple-color="dark"
+                >
+                    Edit
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!--Table-->
+</section>
+<!--List of beneficiaries section-->
+
+</body>
+</html>

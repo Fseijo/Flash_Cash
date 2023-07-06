@@ -4,24 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1de843a5-c1bc-4cec-bc3a-a8cacbc70507" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/config/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/controller/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/static/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/static/index.css" afterDir="false" />
+    <list default="true" id="1de843a5-c1bc-4cec-bc3a-a8cacbc70507" name="Changes" comment="Update 1.1.3&#10;&#10;Fixed:&#10;All problems with bootstrap compatibility fixed&#10;&#10;To do:&#10;* Back:&#10;- Transfer&#10;- Others&#10;* Front:&#10;- FAQ&#10;- Settings&#10;- Profile&#10;- About???&#10;- ...">
+      <change afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/TransferService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/form/CreditAccountRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/form/TransferFormRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/form/TransferToBankFormRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/profile/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/transfer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/auth/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/auth/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/UserAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/UserAccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/transfer-to-bank.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/transfer-to-bank.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Thymeleaf" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,12 +49,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/StagiaireDEV/IdeaProjects/Flash Cash/flashCash/src/main/resources/templates"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/StagiaireDEV/IdeaProjects/Flash Cash/flashCash/src/main/resources/templates&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\StagiaireDEV\IdeaProjects\Flash Cash\flashCash\src\main\resources\templates" />
@@ -81,6 +89,18 @@
       <option name="presentableId" value="Default" />
       <updated>1688547052348</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update 1.1.3&#10;&#10;Fixed:&#10;All problems with bootstrap compatibility fixed&#10;&#10;To do:&#10;* Back:&#10;- Transfer&#10;- Others&#10;* Front:&#10;- FAQ&#10;- Settings&#10;- Profile&#10;- About???&#10;- ...">
+      <created>1688564996547</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688564996547</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update 1.1.3&#10;&#10;Fixed:&#10;All problems with bootstrap compatibility fixed&#10;&#10;To do:&#10;* Back:&#10;- Transfer&#10;- Others&#10;* Front:&#10;- FAQ&#10;- Settings&#10;- Profile&#10;- About???&#10;- ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 1.1.3&#10;&#10;Fixed:&#10;All problems with bootstrap compatibility fixed&#10;&#10;To do:&#10;* Back:&#10;- Transfer&#10;- Others&#10;* Front:&#10;- FAQ&#10;- Settings&#10;- Profile&#10;- About???&#10;- ..." />
   </component>
 </project>

@@ -5,6 +5,7 @@ import com.seijo.flashCash.model.Role;
 import com.seijo.flashCash.model.User;
 import com.seijo.flashCash.model.UserAccount;
 import com.seijo.flashCash.repositories.UserRepository;
+import com.seijo.flashCash.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuthenticationService {
 
-    private final UserRepository userRepository;
+    private final UserService userService;
     private final PasswordEncoder encoder;
 
 
@@ -28,7 +29,7 @@ public class AuthenticationService {
                 .password(encoder.encode(request.getPassword()))
                 .role(Role.USER)
                 .build();
-       return userRepository.save(user);
+       return userService.saveUser(user);
     }
 
 }

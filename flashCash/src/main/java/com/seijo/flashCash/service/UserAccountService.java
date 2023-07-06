@@ -27,4 +27,8 @@ public class UserAccountService {
     public UserAccount findByIban(String iban){
         return userAccountRepository.findByIban(iban);
     }
+
+    public UserAccount saveAccount(UserAccount account){
+        return userAccountRepository.save(account);
+    }
 }

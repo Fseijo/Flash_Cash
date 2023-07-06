@@ -60,3 +60,10 @@
   line-height: 1.875rem;
   font-weight: 400;
 }
+
+.bg-img-1 {
+  background-size: cover;
+  min-height: 60vh;
+  position: relative;
+  color: white;
+}
