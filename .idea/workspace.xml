@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1de843a5-c1bc-4cec-bc3a-a8cacbc70507" name="Changes" comment="Update 1.1.3&#10;&#10;Fixed:&#10;All problems with bootstrap compatibility fixed&#10;&#10;To do:&#10;* Back:&#10;- Transfer&#10;- Others&#10;* Front:&#10;- FAQ&#10;- Settings&#10;- Profile&#10;- About???&#10;- ...">
-      <change afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/TransferService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/form/CreditAccountRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/form/TransferFormRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/form/TransferToBankFormRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/profile/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/transfer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/controller/TransferController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/auth/AuthenticationRequest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/auth/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/auth/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/TransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/TransferService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/UserAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/UserAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/form/TransferToBankFormRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/form/TransferToBankFormRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/credit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/transfer-to-bank.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/transfer-to-bank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/transfer.html" beforeDir="false" afterPath="$PROJECT_DIR$/flashCash/src/main/resources/templates/transfer/transfer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Thymeleaf" />
         <option value="Class" />
+        <option value="Thymeleaf" />
       </list>
     </option>
   </component>
@@ -52,6 +55,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/StagiaireDEV/IdeaProjects/Flash Cash/flashCash/src/main/resources/templates&quot;
   }
 }</component>
@@ -96,11 +100,44 @@
       <option name="project" value="LOCAL" />
       <updated>1688564996547</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update 1.1.3&#10;&#10;Fixed:&#10;All problems with bootstrap compatibility fixed&#10;&#10;To do:&#10;* Back:&#10;- Transfer&#10;- Others&#10;* Front:&#10;- FAQ&#10;- Settings&#10;- Profile&#10;- About???&#10;- ...">
+      <created>1688651794812</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688651794812</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update 1.1.3&#10;&#10;Fixed:&#10;All problems with bootstrap compatibility fixed&#10;&#10;To do:&#10;* Back:&#10;- Transfer&#10;- Others&#10;* Front:&#10;- FAQ&#10;- Settings&#10;- Profile&#10;- About???&#10;- ..." />
     <option name="LAST_COMMIT_MESSAGE" value="Update 1.1.3&#10;&#10;Fixed:&#10;All problems with bootstrap compatibility fixed&#10;&#10;To do:&#10;* Back:&#10;- Transfer&#10;- Others&#10;* Front:&#10;- FAQ&#10;- Settings&#10;- Profile&#10;- About???&#10;- ..." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/controller/TransferController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/TransferService.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/service/UserService.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/flashCash/src/main/java/com/seijo/flashCash/model/UserAccount.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

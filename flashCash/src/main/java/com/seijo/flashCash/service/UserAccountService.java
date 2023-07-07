@@ -2,19 +2,17 @@ package com.seijo.flashCash.service;
 
 import com.seijo.flashCash.model.UserAccount;
 import com.seijo.flashCash.repositories.UserAccountRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class UserAccountService {
 
     private final UserAccountRepository userAccountRepository;
-
-    public UserAccountService(UserAccountRepository userAccountRepository) {
-        this.userAccountRepository = userAccountRepository;
-    }
 
     public List<UserAccount> findAll(){
         return userAccountRepository.findAll();

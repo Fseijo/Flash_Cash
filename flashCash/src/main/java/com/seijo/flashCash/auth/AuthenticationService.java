@@ -4,7 +4,6 @@ package com.seijo.flashCash.auth;
 import com.seijo.flashCash.model.Role;
 import com.seijo.flashCash.model.User;
 import com.seijo.flashCash.model.UserAccount;
-import com.seijo.flashCash.repositories.UserRepository;
 import com.seijo.flashCash.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;

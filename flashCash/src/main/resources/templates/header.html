@@ -1,0 +1,84 @@
+<header class="p-3 text-bg-dark">
+    <div class="container">
+        <div
+                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+            <a
+                    href="/flashcash/"
+                    class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+            >
+                <img
+                        th:src="@{/images/logo.png}"
+                        class="me-2 rounded"
+                        height="80"
+                        alt="FlashCash Logo"
+                        loading="lazy"
+                />
+            </a>
+            <!-- Left elements-->
+            <ul
+                    class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+            >
+                <li>
+                    <a class="nav-link px-2 text-secondary" href="/flashcash/home"
+                    >Home</a
+                    >
+                </li>
+                <li>
+                    <a class="nav-link px-2 text-secondary" href="/flashcash/transfer"
+                    >Transfer</a
+                    >
+                </li>
+                <li>
+                    <a class="nav-link px-2 text-secondary" href="/flashcash/profile"
+                    >Profile</a
+                    >
+                </li>
+                <li>
+                    <a href="/faqs" class="nav-link px-2 text-white">FAQs</a>
+                </li>
+                <li>
+                    <a href="/about" class="nav-link px-2 text-white">About</a>
+                </li>
+            </ul>
+            <!-- Right elements-->
+
+            <!-- Avatar -->
+            <div class="dropdown">
+                <img
+                        src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                        class="btn btn-secondary dropdown-toggle rounded-circle"
+                        role="button"
+                        height="80"
+                        alt="Black and White Portrait of a Man"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        loading="lazy"
+                />
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="/flashcash/profile"
+                        >My profile</a
+                        >
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/flashcash/transfer">Transfer</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item">
+                            <form th:action="@{/logout}" method="post">
+                                <input
+                                        class="btn btn-outline-dark"
+                                        type="submit"
+                                        value="Sign Out"
+                                />
+                            </form>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Avatar -->
+        </div>
+    </div>
+</header>
+
