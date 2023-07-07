@@ -10,6 +10,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TransferToBankFormRequest {
-    private String iban;
     private Double amount;
 }
