@@ -2,6 +2,7 @@ package com.seijo.flashCash.service;
 
 import com.seijo.flashCash.model.UserAccount;
 import com.seijo.flashCash.repositories.UserAccountRepository;
+import com.seijo.flashCash.service.form.RegisterIbanRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.Optional;
 public class UserAccountService {
 
     private final UserAccountRepository userAccountRepository;
+    private final UserService userService;
 
     public List<UserAccount> findAll(){
         return userAccountRepository.findAll();
@@ -29,4 +31,11 @@ public class UserAccountService {
     public UserAccount saveAccount(UserAccount account){
         return userAccountRepository.save(account);
     }
+
+    public UserAccount registerIban(RegisterIbanRequest request){
+        UserAccount account = userService.sessionUser().getAccount();
+        account.setIban(request.getIban());
+        return saveAccount(account);
+    }
+
 }

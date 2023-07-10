@@ -67,3 +67,11 @@
   position: relative;
   color: white;
 }
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  transition: all 0.3s linear 0s;
+  transform: translateX(0%);
+}

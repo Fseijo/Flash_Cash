@@ -18,6 +18,7 @@
 <section class="text-center text-lg-start">
     <div class="container py-4">
         <div class="row g-0 align-items-center">
+            <!--Form-->
             <div class="col-lg-6 mb-5 mb-lg-0">
                 <div class="card cascading-right" style="
               background: hsla(0, 0%, 100%, 0.55);
@@ -25,9 +26,19 @@
               ">
                     <div class="card-body p-5 shadow-5 text-center">
                         <h2 class="fw-bold h-1">Transfer</h2>
-                        <h3 class="fw-bold h-2">cash to Bank</h3>
-                        <form th:action="@{/transfer-to-bank}" th:object="${transferToBankForm}" method="post">
-                            <!-- Amount input group -->
+                        <h3 class="fw-bold h-2">cash to a friend</h3>
+                        <form th:action="@{/transfer}" th:object="${transferForm}" method="post">
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email"
+                                       th:field="*{contactEmail}"
+                                       id="email"
+                                       name="email"
+                                       class="form-control"
+                                       placeholder="Select friend's email" required/>
+                                <label class="form-label" for="email">Email</label>
+                            </div>
+                            <!-- Montant imput group -->
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">$</span>
@@ -38,7 +49,7 @@
                                        class="form-control"
                                        aria-label="Amount (to the nearest dollar)"
                                        min="10"
-                                />
+                                       value="10">
                             </div>
                             <!-- Submit button -->
                             <button type="submit" class="btn btn-dark btn-block mb-4">
@@ -48,9 +59,9 @@
                     </div>
                 </div>
             </div>
-
+            <!--Image-->
             <div class="col-lg-6 mb-5 mb-lg-0">
-                <img th:src="@{/images/img_happy}"
+                <img th:src="@{/images/send_img.jpg}"
                      class="w-100 rounded-4 shadow-4"
                      alt="img_phone"/>
             </div>

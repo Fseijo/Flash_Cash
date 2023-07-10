@@ -9,8 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class TransferFormRequest {
-
-    private String contactEmail;
-    private Double amount;
+public class RegisterIbanRequest {
+    private String iban;
 }
