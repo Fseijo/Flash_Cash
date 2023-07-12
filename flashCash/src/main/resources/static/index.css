@@ -67,11 +67,16 @@
   position: relative;
   color: white;
 }
+.bg-img-2 {
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+  color: white;
+}
 
 .sidebar {
-  width: 240px;
+  width: 240px !important;
   height: 100vh;
-  position: fixed;
   transition: all 0.3s linear 0s;
   transform: translateX(0%);
 }
